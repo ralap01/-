@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    .geometric-flowers {
+      width: 100px;
+      height: 100px;
+      position: relative;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+
+    .petal {
+      width: 50%;
+      height: 50%;
+      border-top-left-radius: 100%;
+      border-bottom-right-radius: 100%;
+      position: absolute;
+      left: 50%;
+      transform-origin: 0 100%;
+
+    }
+
+
+
+    .petal:nth-child(1) {
+      transform: rotate(45deg);
+      background: linear-gradient(45deg, #8bf8, #bf88);
+    }
+
+    .petal:nth-child(2) {
+      transform: rotate(90deg);
+      background: linear-gradient(45deg, #bf88, #f8b8);
+    }
+
+    .petal:nth-child(3) {
+      transform: rotate(135deg);
+      background: linear-gradient(45deg, #f8b8, #fb88);
+    }
+
+    .petal:nth-child(4) {
+      transform: rotate(180deg);
+      background: linear-gradient(45deg, #fb88, #8fb8);
+    }
+
+    .petal:nth-child(5) {
+      transform: rotate(225deg);
+      background: linear-gradient(45deg, #8fb8, #0ff8);
+    }
+
+    .petal:nth-child(6) {
+      transform: rotate(270deg);
+      background: linear-gradient(45deg, #0ff8, #a8f8);
+    }
+
+    .petal:nth-child(7) {
+      transform: rotate(315deg);
+      background: linear-gradient(45deg, #ff08, #8bf8);
+    }
+
+    .petal:nth-child(8) {
+      transform: rotate(360deg);
+      background: linear-gradient(45deg, #ac08, #f8c8);
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="geometric-flowers">
+    <div class="petal"></div>
+    <div class="petal"></div>
+    <div class="petal"></div>
+    <div class="petal"></div>
+    <div class="petal"></div>
+    <div class="petal"></div>
+    <div class="petal"></div>
+    <div class="petal"></div>
+  </div>
+</body>
+
+</html>

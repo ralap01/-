@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    body {
+      margin: 0;
+    }
+
+    video {
+      position: fixed;
+      right: 0;
+      bottom: 0;
+      min-width: 100%;
+      min-height: 100%;
+      width: auto;
+      height: auto;
+      z-index: -9999;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      border: 0;
+    }
+
+    html,
+    body {
+      margin: 0;
+    }
+
+    @-webkit-keyframes STAR-MOVE {
+      from {
+        background-position: 0% 0%
+      }
+
+      to {
+        background-position: 600% 0%
+      }
+    }
+
+    @keyframes STAR-MOVE {
+      from {
+        background-position: 10% 0%
+      }
+
+      to {
+        background-position: 600% 0%
+      }
+    }
+
+    .wall {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+
+    }
+
+    div#background {
+      background: #74ebd5;
+      /* fallback for old browsers */
+      background: -webkit-linear-gradient(to left, #ACB6E5, #74ebd5);
+      /* Chrome 10-25, Safari 5.1-6 */
+      background: linear-gradient(to left, #ACB6E5, #74ebd5);
+      /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+      url('img/background.png') repeat-x 5% 0%;
+      /*background-size: cover;*/
+      -webkit-animation: STAR-MOVE 200s linear infinite;
+      -moz-animation: STAR-MOVE 200s linear infinite;
+      -ms-animation: STAR-MOVE 200s linear infinite;
+      animation: STAR-MOVE 200s linear infinite;
+    }
+
+    div#midground {
+      background: url('img/midground.png')repeat 20% 5%;
+      z-index: 1;
+      -webkit-animation: STAR-MOVE 100s linear infinite;
+      -moz-animation: STAR-MOVE 100s linear infinite;
+      -ms-animation: STAR-MOVE 100s linear infinite;
+      animation: STAR-MOVE 100s linear infinite;
+    }
+
+    div#foreground {
+      background: url('img/foreground.png')repeat 35% 0%;
+
+      z-index: 2;
+      -webkit-animation: STAR-MOVE 50s linear infinite;
+      -moz-animation: STAR-MOVE 50s linear infinite;
+      -ms-animation: STAR-MOVE 50s linear infinite;
+      animation: STAR-MOVE 50s linear infinite;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="yi">
+
+  </div>
+  <div id="background" class="wall">
+  </div>
+  <div id="midground" class="wall"></div>
+  <div id="foreground" class="wall">
+    <marquee direction="right" scrollamount="12px" class="a1">
+      <font color="lightyellow"><em>
+          <dfn>
+            <h1>
+                &#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp;
+                &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp;
+                &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp;
+                &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp;
+                &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp;
+                &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp;
+                &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp;
+                &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp;
+                &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052
+            </h1>
+          </dfn>
+        </em></font>
+    </marquee>
+    <marquee direction="left" scrollamount="14px">
+      <font color="lightyellow">
+        <dfn>
+          <h1>&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp;
+              &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp;
+              &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp;
+              &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp;
+              &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp;
+              &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp;
+              &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp;
+              &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp;
+              &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052</h1>
+        </dfn>
+      </font>
+    </marquee>
+    <marquee direction="right" scrollamount="16px">
+      <font color="lightyellow">
+        <dfn>
+          <h1>&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp;
+              &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp;
+              &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp;
+              &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp;
+              &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp;
+              &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp;
+              &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp;
+              &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp;
+              &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052</h1>
+        </dfn>
+      </font>
+    </marquee>
+    <marquee direction="left" scrollamount="14px">
+      <font color="lightyellow">
+        <dfn>
+          <h1>&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp;
+              &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp;
+              &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp;
+              &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp;
+              &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp;
+              &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp;
+              &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp;
+              &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp;
+              &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052</h1>
+        </dfn>
+      </font>
+    </marquee>
+    <marquee direction="right" scrollamount="18px">
+      <font color="lightyellow">
+        <h1><dfn>&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp;
+            &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp;
+            &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp;
+            &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp;
+            &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp;
+            &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp;
+            &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp;
+            &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp;
+            &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052</dfn></h1>
+      </font>
+    </marquee>
+    <marquee direction="left" scrollamount="16px">
+      <font color="lightyellow">
+        <dfn>
+          <h1>&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp;
+              &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp;
+              &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp;
+              &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp;
+              &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp;
+              &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp;
+              &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp;
+              &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp;
+              &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052</h1>
+        </dfn>
+      </font>
+    </marquee>
+    <marquee direction="right" scrollamount="17px">
+      <font color="lightyellow">
+        <dfn>
+          <h1>&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp;
+              &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp;
+              &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp;
+              &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp;
+              &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp;
+              &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp;
+              &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp;
+              &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp;
+              &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052</h1>
+        </dfn>
+      </font>
+    </marquee>
+    <marquee direction="left" scrollamount="13px">
+      <font color="lightyellow">
+        <dfn>
+          <h1>&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp;
+              &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp;
+              &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp;
+              &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp;
+              &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp;
+              &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp;
+              &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp;
+              &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp;
+              &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052</h1>
+        </dfn>
+      </font>
+    </marquee>
+    <marquee direction="left" scrollamount="19px">
+      <font color="lightyellow">
+        <dfn>
+          <h1>&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp;
+              &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp;
+              &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp;
+              &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp;
+              &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp;
+              &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp;
+              &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp;
+              &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp;
+              &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052</h1>
+        </dfn>
+      </font>
+    </marquee>
+    <marquee direction="right" scrollamount="18px">
+      <font color="lightyellow">
+        <dfn>
+          <h1>&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp;
+              &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp;
+              &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp;
+              &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp;
+              &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp;
+              &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp;
+              &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp;
+              &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp;
+              &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052</h1>
+        </dfn>
+      </font>
+    </marquee>
+    <marquee direction="left" scrollamount="16px">
+      <font color="lightyellow">
+        <dfn>
+          <h1>&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp;
+              &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp;
+              &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp;
+              &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp;
+              &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp;
+              &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp;
+              &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp;
+              &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp;
+              &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052</h1>
+        </dfn>
+      </font>
+    </marquee>
+    <marquee direction="right" scrollamount="15px">
+      <font color="lightyellow">
+        <dfn>
+          <h1>&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp;
+              &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp;
+              &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp;
+              &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp;
+              &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp;
+              &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp;
+              &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp;
+              &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp;
+              &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052</h1>
+        </dfn>
+      </font>
+    </marquee>
+    <marquee direction="left" scrollamount="18px">
+      <font color="lightyellow">
+        <dfn>
+          <h1>&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp;
+              &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp;
+              &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp;
+              &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp;
+              &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp;
+              &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp;
+              &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp;
+              &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp;
+              &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052</h1>
+        </dfn>
+      </font>
+    </marquee>
+    <marquee direction="right" scrollamount="14px">
+      <font color="lightyellow">
+        <dfn>
+          <h1>&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp;
+              &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp;
+              &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp;
+              &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp;
+              &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp;
+              &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp;
+              &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp;
+              &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp;
+              &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052</h1>
+        </dfn>
+      </font>
+    </marquee>
+<marquee direction="left" scrollamount="18px">
+      <font color="lightyellow">
+        <dfn>
+          <h1>&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp;
+              &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp;
+              &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp;
+              &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp;
+              &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp;
+              &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp;
+              &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp;
+              &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp;
+              &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#10052</h1>
+        </dfn>
+      </font>
+
+
+  </div>
+</body>
+<!--<video autoplay="autoplay" style="width: 100%;">
+			<source src="img/msk.mp4">
+			</source>
+		</video>-->
+
+</html>
