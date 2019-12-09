@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>一个简单的综合演示</title>
+  <style>
+    /* 通过注释描述css类的作业，方便自己理解页面样式以及组成 */
+    /* 去掉body多余的边距 */
+    body {
+      padding: 0px;
+      margin: 0px;    
+      
+    }
+
+    /*
+  最上方的返回菜单样式 
+   */
+
+    .top-menu {
+      /* 文本要靠右 */
+      text-align: right;
+      
+      /* 背景颜色 */
+      background-color: #303f9f;
+      /*元素的内边距，意思是该元素呵厘米的元素分开
+      padding后面是四个值分别是上右下左的边距值*/
+      padding: 0.5em 0.5em 0.5em 0.5em;
+    }
+
+    /* 头部菜单的超链接样式 */
+    .top-a {
+      /* 去掉下划线 */
+      text-decoration: none;
+      /* 颜色 */
+      color: white;
+      /* 字体大小 */
+      font-size: 1.2rem;
+
+
+    }
+    /* 标题的样式 */
+    .title{
+      background-color:  #3f51b5;
+      color: white;
+      text-align: center;
+      font-size: 2rem;
+      /* 如果padding 只给一个值，显示上下左右都是相同的值*/
+      padding: 1rem;
+    }
+    .title-text{
+      color: #ff4081;
+      font-size: 1.2em;
+
+    }
+    /* 描述文本的样式 */
+    .info{
+      color: #bdbdbd;
+      font-size: 0.8rem;
+      text-align: center;
+      background-color: #3f51b5;
+      /* 如果padding有两个值，分别是上下和左右 */
+      padding: 0.2em 0em;
+    }
+
+   
+  </style>
+</head>
+
+<body>
+
+  <!-- 这里是头部菜单 -->
+  <header class="top-menu">
+
+    <a class="top-a" href="index.html">返回首页</a>
+    
+    
+
+  </header>
+  <!-- 网站主体部分
+   -->
+<main>
+  <!-- 标题部分 -->
+  <section class="title">
+   <span class="title-text">埼玉</span>的网站
+  </section>
+  <!-- 简介部分 -->
+  <section class="info">
+      <p> 咻咻
+
+      <br>
+      <p>互联网新人
+        <br>
+        <p>啥也不会的IT小白
+
+          <br>
+          <p>通过一些努力了解了VC和PS
+            <br>
+          </p>获得了不小的收获
+          <br>
+          <p>没啥特别技术
+
+
+            <br>
+          </p>然后就没然后了
+          <br>
+        </p>还在学习中。。。。
+        <br>
+      </p>实在想不到写什么了
+      <br>
+      <p>就介绍到这吧</p>
+
+ 
+  </section>
+</main>
+<!-- 
+  audio是音频控件
+  autoplay表示自动播放（谷歌浏览器禁用了）
+  controls表示显示播放控制
+  loop表示循环播放
+  src是音乐文件地址
+ -->
+ <audio autoplay controls loop src="Eugene The Dream,Vine - Spongebob Remix ＂Krusty Krab＂.mp3"></audio>
+ <!-- 
+   video是嵌入视频标记
+   src是视频文件的地址
+   
+  -->
+ <video style="width: 300px;"  controls src="https://klcxy.top/myoss/common/queryOssUrl?tbOssInfo.oiid=7&tbOssInfo.obid=1"></video>
+</body>
+
+</html>

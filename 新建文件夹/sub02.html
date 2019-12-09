@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    body{
+      padding: 0px;
+      margin: 0px;
+      
+    }
+    /* 块元素边框 */
+    .border01{
+      /* border是边框，第一个值是边框的宽度
+      第二个是边框的线性，solid是单线条
+      第三个是边框的颜色 
+      每个参数用空格隔开 */
+      border: 1px solid red;
+    }
+    /* 同时又边框与内边距 */
+    .a1{
+      padding: 1rem;
+      /* border可以分开成多个属性，border-color是边框颜色 */
+border-color:black;
+/* border-width是边框宽度 */
+border-width: 1px;
+/* border-style是边框线型 */
+border-style: dotted;
+    }
+    .a2{
+      border: 1px solid blue;
+      /* 圆角 border-radius值是圆角大小 */
+      border-radius: 500px;
+    }
+    /* 圆 */
+    .a3{
+      /* 高宽都一样 */
+      width:50px;
+      height:  50px;
+      border: 1px solid red;
+      border-radius:50%;
+    }
+    /* 定制圆角的位置，上端圆角 */
+    .a4{
+      border: 1px solid black;
+      width: 50px;
+      height: 50px;
+      /* border-top-left-radius表示上右方的圆角
+      top上 left右 right左 bottmo下
+       */
+      border-top-left-radius: 10px;
+      /*  border-top-right-radius表示上左方的圆角*/
+
+      border-top-right-radius: 10px;
+    }
+    .a5{
+      /* border-top位置就是定制指定位置边框 */
+      border-top: 2px solid blueviolet;
+      border-bottom: 2px solid blueviolet;
+      height: 50px;
+      width: 50px;
+    }
+    /* 外边框，表示元素和外面元素分开 */
+    .a6{
+      /*  margin的四个参数和padding一样，是上右下左 */
+      margin: 1rem 2rem 3rem 4rem;
+    }
+
+  
+  </style>
+</head>
+<body>
+  <!-- 边框 -->
+  <section class="border01">
+    带边框的块元素
+  </section>
+  <section class="border01">
+    非块级元素的边框
+  </section >
+  <!-- 边框与内边距 -->
+  <section class="a1">
+ <span class="a2"> 
+   边框与内边距
+ </span>
+
+
+
+  
+  </section>
+
+<!-- 圆 -->
+<section >
+  <center><div class="a3">圆</div></center>
+</section>
+<!-- 定制圆角 -->
+<section class="a4">
+  上端圆角
+</section>
+<!-- 定制边框 -->
+<section class="a5">
+  上下边框
+</section>
+<!-- 外边框 -->
+<section class="border01">
+  <!-- class里面可以套用多个样式，中间用空格分开，这样会让多个不同的样式同时生效 -->
+  <div class="a6 border01" >1</div>
+  <div class=" a6 border01" >2</div>
+</section>
+
+
+
+
+</body>
+</html>
